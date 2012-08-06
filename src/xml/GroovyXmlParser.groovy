@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package domxml
+package xml
 
 def documentRoot = new XmlParser().parse("xml/documents.xml")
 
