@@ -87,5 +87,47 @@ public class JavaCanadianAddress {
     @Override
     public String toString() {
         return civicNumber + " " + street + " " + appartment + "\n" + city + ", " + province + "\n" + postalCode;
+    }    
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 13 * hash + this.civicNumber;
+        hash = 13 * hash + (this.street != null ? this.street.hashCode() : 0);
+        hash = 13 * hash + (this.appartment != null ? this.appartment.hashCode() : 0);
+        hash = 13 * hash + (this.city != null ? this.city.hashCode() : 0);
+        hash = 13 * hash + (this.province != null ? this.province.hashCode() : 0);
+        hash = 13 * hash + (this.postalCode != null ? this.postalCode.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final JavaCanadianAddress other = (JavaCanadianAddress) obj;
+        if (this.civicNumber != other.civicNumber) {
+            return false;
+        }
+        if ((this.street == null) ? (other.street != null) : !this.street.equals(other.street)) {
+            return false;
+        }
+        if ((this.appartment == null) ? (other.appartment != null) : !this.appartment.equals(other.appartment)) {
+            return false;
+        }
+        if ((this.city == null) ? (other.city != null) : !this.city.equals(other.city)) {
+            return false;
+        }
+        if ((this.province == null) ? (other.province != null) : !this.province.equals(other.province)) {
+            return false;
+        }
+        if ((this.postalCode == null) ? (other.postalCode != null) : !this.postalCode.equals(other.postalCode)) {
+            return false;
+        }
+        return true;
     }
 }

@@ -15,6 +15,9 @@
  */
 package address
 
+import groovy.transform.*
+
+@Canonical
 class GroovyCanadianAddress {
     def civicNumber
     def street
@@ -22,17 +25,4 @@ class GroovyCanadianAddress {
     def city
     def province
     def postalCode
-    
-    GroovyCanadianAddress(civicNumber, street, appartment, city, province, postalCode) {
-        this.civicNumber = civicNumber
-        this.street = street
-        this.appartment = appartment
-        this.city = city
-        this.province = province
-        this.postalCode = postalCode
-    }
-    
-    String toString() {
-        civicNumber + " " + street + " " + appartment + "\n" + city + ", " + province + "\n" + postalCode
-    }
 }
