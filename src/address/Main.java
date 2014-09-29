@@ -19,7 +19,6 @@ public class Main {
 
     public static void main(String[] args) {
         JavaCanadianAddress testJava = new JavaCanadianAddress(75, "Port-Royal Est", "Suite 500", "Montréal", "QC", "H3L3T1");
-        GroovyCanadianAddress testGroovy = new GroovyCanadianAddress(75, "Port-Royal Est", "Suite 500", "Montréal", "QC", "H3L3T1");
-        System.out.println("Test de Java :\n" + testJava + "\n\nTest de Groovy :\n" + testGroovy);
+        System.out.println("Test de Java :\n" + testJava + "\n");
     }
 }
